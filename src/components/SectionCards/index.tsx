@@ -37,7 +37,7 @@ export function SectionCards() {
         opacity: 1,
         x: 0,
         duration: 0.5,
-        stagger: .1, 
+        stagger: 0.1,
         scrollTrigger: {
           trigger: section,
           start: "center center",
@@ -59,7 +59,7 @@ export function SectionCards() {
 
     const leftImages = [img01, img02, img03];
     const rightImages = [img04, img05, img06];
-
+    
     gsap.fromTo(
       mockupPhone,
       { opacity: 0, scale: 0.5 },
@@ -82,6 +82,7 @@ export function SectionCards() {
 
     animateCards(leftImages, 50);
     animateCards(rightImages, -50);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -89,52 +90,52 @@ export function SectionCards() {
       <Image
         src={Mockup}
         alt="Mockup main"
-        className="sticky z-10 top-56 mx-auto -mt-[32rem] mb-16 opacity-0"
+        className="sticky z-10 top-56 lg:top-56 mx-auto -mt-[24rem] md:-mt-[36rem] lg:-mt-[32rem] mb-16 opacity-0"
         ref={mockupŔef}
       />
 
       <h2
-        className="text-center text-7xl font-semibold text-black mb-56 opacity-0"
+        className="text-center text-4xl md:text-5xl lg:text-7xl font-semibold text-black mb-56 md:mb-[00px] lg:mb-56 opacity-0 hidden lg:block"
         ref={titleŔef}
       >
         Faça <span className="text-green-title-card">você</span> mesmo de casa
       </h2>
 
-      <div className="relative w-full max-w-area-cards h-area-cards mx-auto">
+      <div className="relative w-full max-w-area-cards h-area-cards mx-auto hidden md:block">
         <Image
           src={Card01}
           alt="Card 01"
-          className="absolute top-8 left-44 opacity-0"
+          className="absolute md:top-8 md:-left-14 lg:top-8 lg:left-44 opacity-0"
           ref={card01Ref}
         />
         <Image
           src={Card02}
           alt="Card 02"
-          className="absolute bottom-32 left-0 opacity-0"
+          className="absolute md:bottom-32 md:left-4 lg:bottom-32 lg:left-0 opacity-0"
           ref={card02Ref}
         />
         <Image
           src={Card03}
           alt="Card 03"
-          className="absolute bottom-0 left-80 opacity-0"
+          className="absolute md:-bottom-0 md:left-32 lg:bottom-0 lg:left-80 opacity-0"
           ref={card03Ref}
         />
         <Image
           src={Card04}
           alt="Card 04"
-          className="absolute top-0 right-32 opacity-0"
+          className="absolute md:top-0 md:-right-14 lg:top-0 lg:right-32 opacity-0"
           ref={card04Ref}
         />
         <Image
           src={Card05}
           alt="Card 05"
-          className="absolute bottom-28 right-0 opacity-0"
+          className="absolute md:bottom-28 md:right-14 lg:bottom-28 lg:right-0 opacity-0"
           ref={card05Ref}
         />
         <Image
           src={Card06}
           alt="Card 06"
-          className="absolute bottom-0 right-80 opacity-0"
+          className="absolute md:bottom-0 md:right-4 lg:bottom-0 lg:right-80 opacity-0"
           ref={card06Ref}
         />
       </div>

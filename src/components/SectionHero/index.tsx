@@ -56,17 +56,17 @@ export function SectionHero() {
           <h3 className="text-xl font-medium text-green-actived mb-4">
             Novo curso focado em instagram
           </h3>
-          <h1 className="text-white text-7xl/normal font-semibold mb-2">
+          <h1 className="text-white text-4xl/normal md:text-5xl/normal lg:text-7xl/normal font-semibold mb-2">
             Destrave as suas habilidades
           </h1>
-          <div className="flex items-center justify-center gap-10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
             <button className="flex items-center gap-2">
               <Image src={IconFile} alt="Icon File" />
               <span className="text-white font-medium">
                 Assinar lista de espera
               </span>
             </button>
-            <button className="py-4 px-5 bg-green-btn rounded-full text-green-primary font-bold">
+            <button className="py-4 px-5 bg-green-btn hover:bg-green-btn-hover rounded-full text-green-primary font-bold transition-colors">
               Começar agora
             </button>
           </div>
@@ -87,13 +87,13 @@ export function SectionHero() {
           <Image
             src={IconMockup}
             alt="Mockup"
-            className="relative top-[1.1rem] left-[3.3rem]"
+            className="relative top-[1.1rem] left-[3.3rem] hidden md:block"
             ref={mockupHeroLeftRef}
           />
           <Image
             src={IconMockup}
             alt="Mockup"
-            className="relative top-[1.1rem] right-[3.3rem]"
+            className="relative top-[1.1rem] right-[3.3rem] hidden md:block"
             ref={mockupHeroRightRef}
           />
         </div>

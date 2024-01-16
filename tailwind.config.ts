@@ -13,6 +13,7 @@ const config: Config = {
         "green-actived": "#5D8A83",
         "green-border": "#2A4B46",
         "green-btn": "#CCEC60",
+        "green-btn-hover": "#CCEC40",
         "green-title-card": "#719D96",
       },
       maxWidth: {

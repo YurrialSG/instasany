@@ -21,14 +21,14 @@ export function Header() {
   return (
     <header className="relative w-full h-24 bg-green-primary flex items-center">
       <GridContainer className="flex items-center justify-between">
-        <Image src={LogoImg} alt="logo" />
-        <div className="flex items-center gap-20">
+        <Image src={LogoImg} alt="logo" className="m-auto md:m-0" />
+        <div className="hidden items-center gap-20 md:flex">
           <nav className="flex gap-2">
             {arrayMenu.map((item, index) => (
               <Link
                 key={index}
                 href="#"
-                className={`px-3 py-1 text-white text-opacity-40 hover:text-opacity-100 transition-all ${
+                className={`px-1 lg:px-3 py-1 text-[14px] lg:text-base text-white text-opacity-40 hover:text-opacity-100 transition-all ${
                   index === 0 ? activedStyled : ""
                 }`}
               >
@@ -36,7 +36,7 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-6">
+          <div className="hidden items-center gap-6 lg:flex">
             <button>
               <Image src={SearchIcon} alt="Icon Search" />
             </button>
